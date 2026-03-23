@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: black;
+        }
+        #b1 {
+            background: red;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+        #d1 {
+            background: orange;
+            width: 700px;
+            height: 700px;
+            transform-origin: top left;
+            overflow: hidden;
+            text-align: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        #meega{
+            font-size: 75px;
+            background-color: white;
+            width: 500px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">
+        <p>Jedno ręki bantyta</p>
+        <p id="meega">7️⃣7️⃣7️⃣</p>
+        <div id="mii">Witamy Ponownie</div>
+        <button id="b1">Klikni</button>
+    </div>
+    <script>
+        let meega = document.getElementById("meega")
+        let b1 = document.getElementById("b1")
+        const beb = ["🍒", "🍋", "🍉", "⭐", "7️⃣"]
+        let licznik = 0
+        addEventListener("click", function(){
+            let a =""
+            for (let i = 0; i < 3; i++) {
+                a += beb[Math.floor(Math.random() * beb.length)]
+            }
+            licznik++
+            meega.innerHTML = a
+                if (a == "7️⃣7️⃣7️⃣") {
+                    mii.innerHTML = "!!!!!MEGA BIG WIN!!!!!"
+                }else if(a == "🍒🍒🍒"){
+                    mii.innerHTML = "Nice spróbujesz jeszcze"
+                }else if(a == "🍋🍋🍋"){
+                    mii.innerHTML = "Nice spróbujesz jeszcze"
+                }else if(a == "🍉🍉🍉"){
+                    mii.innerHTML = "Nice spróbujesz jeszcze"
+                }else if(a =="⭐⭐⭐"){
+                    mii.innerHTML = "Nice spróbujesz jeszcze"
+                }else{
+                    mii.innerHTML = "nie tym razem, spróbuj ponownie"
+                }
+                 if (licznik === 2) {
+                mii.innerHTML = "<img src='hq720.jpg'>"
+                licznik = 0
+                }
+        })
+    </script>
+</body>
+</html>
